@@ -1,0 +1,37 @@
+<div class="container">
+    <nav class="navbar ">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/"><span class="icon"><i class="fa fa-home"></i></span></a>
+        <a class="navbar-item" href="/dna/">DNA</a>
+        <a class="navbar-item" href="/study/">Study</a>
+        <a class="navbar-item" href="/startup/">Startup</a>
+        <div class="navbar-burger" data-target="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end">
+            <a class="navbar-item" href="/tag/blog">Blog</a>
+            <div class="navbar-item">
+            <div class="field is-grouped">
+              <a class="button is-white" href="mailto:hello@jaaga.in" target="_blank">
+                <span class="icon"><i class="fa fa-envelope"></i></span>
+              </a>&nbsp;
+            {{#if @blog.facebook}}
+              <a class="button is-white" href="{{facebook_url @blog.facebook}}" target="_blank">
+                <span class="icon"><i class="fa fa-facebook"></i></span>
+              </a>&nbsp;
+            {{/if}}
+            {{#if @blog.twitter}}
+              <a class="button is-white" href="{{twitter_url @blog.twitter}}" target="_blank">
+                <span class="icon"><i class="fa fa-twitter"></i></span>
+              </a>
+            {{/if}}
+            </div>
+            </div>
+        </div>
+      </div>
+    </nav>
+</div>
