@@ -13,19 +13,18 @@
 
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "css/bulma.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}" />
 
     {{!-- This tag outputes SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
 </head>
-<body class="{{body_class}}">
+<body">
 
     <section class="content">
-        <div class="container">
-
+        <div class="container"> 
             {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
             {{{body}}}
-
         </div>
     </section>
 
@@ -98,11 +97,11 @@
     {{/if}}
 
     {{!-- The footer at the very bottom of the screen --}}
-    <footer class="footer is-marginless is-paddingless">
+    <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
           <p>
-            Built by <strong><a href="{{@blog.url}}">{{@blog.title}}</a></strong> using <a href="http://ghost.org" target="_blank">Jekyll</a> and <a href="http://bulma.io" target="_blank">Bulma</a>. Website source code is licensed
+            Built by <strong><a href="{{@blog.url}}">{{@blog.title}}</a></strong> using <a href="http://ghost.org" target="_blank">Ghost</a> and <a href="http://bulma.io" target="_blank">Bulma</a>. Website source code is licensed
             <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>. Website content
             is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC ANS 4.0</a>.
           </p>

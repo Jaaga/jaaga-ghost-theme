@@ -1,10 +1,12 @@
-<div class="card">
+<div class="card is-shadowless">
     {{#if feature_image}}
+    <a href="{{url}}">
     <div class="card-image">
-        <figure class="image">
+        <figure class="image is-marginless">
           <img src="{{feature_image}}" alt="Image" style="align-self: center;">
         </figure>
     </div>
+    </a>
     {{/if}}
       <div class="card-content">
         <div class="media">
@@ -12,13 +14,14 @@
             <a href="{{url}}"><p class="title is-4">{{title}}</p></a>
           </div>
         </div>
-
         <div class="content">
           <p>{{excerpt words="33"}}</p>
           
           <small>
                 {{#if author.profile_image}}
+                <figure class="image">
                     <img src="{{author.profile_image}}" alt="{{author.name}}" />
+                </figure>
                 {{/if}}
                 <span>{{author}}</span>
           </small>

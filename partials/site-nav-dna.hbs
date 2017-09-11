@@ -1,9 +1,8 @@
-<nav class="navbar is-jaaga-red">
+<nav class="navbar is-dna">
   <div class="navbar-brand">
     <a class="navbar-item is-white" href="/"><span class="icon"><i class="fa fa-home"></i></span></a>
     <a class="navbar-item is-white" href="/dna/">DNA</a>
-    <a class="navbar-item is-white" href="/study/">Study</a>
-    <a class="navbar-item is-white" href="/startup/">Startup</a>
+    <a class="navbar-item is-white" href="/dna-projects/">Projects</a>
     <div class="navbar-burger is-white" data-target="navMenu">
       <span></span>
       <span></span>
@@ -11,6 +10,10 @@
     </div>
   </div>
   <div class="navbar-menu" id="navMenu">
-    {{> "right-navbar"}}
+  <div class="navbar-start">
+    <a class="navbar-item is-white" href="/dna-residencies/">Residencies</a>
+    <a class="navbar-item is-uppercase is-white" href="/dna-join/"><b>Join</b></a>
+  </div>
+  {{> "right-navbar"}}
   </div>
 </nav>

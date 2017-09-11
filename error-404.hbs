@@ -7,13 +7,12 @@ It's a good idea to keep this template as minimal as possible in terms of both f
 
 {{> "header"}}
 
-        <main id="site-main" class="site-main outer" role="main">
-            <div class="inner">
+<div class="container">
 
-                <section class="error-message">
-                    <h1 class="error-code">{{code}}</h1>
-                    <p class="error-description">{{message}}</p>
-                    <a class="error-link" href="{{@blog.url}}">Go to the front page →</a>
-                </section>
-            </div>
-        </main>
+    <section>
+        <br>
+        <h2>Oops! Something's not quite right. <a class="error-link" href="{{@blog.url}}">You can go back to the front page →</a></h2>
+        <p class="is-5">Error: {{code}}</p>
+        <p class="is-6">{{message}}</p>
+    </section>
+</div>

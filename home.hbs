@@ -5,14 +5,12 @@ into the {body} of the default.hbs template --}}
 {{> "header"}}
 
 {{!-- The main content area --}}
-<main id="site-main" class="site-main outer" role="main">
-<div class="columns">
-  {{#get "posts" filter="featured:true+page:true"}}
-  {{#foreach posts}}
-    <div class="column">
-    {{> post-card}}
-    </div>
-  {{/foreach}}
-{{/get}}
+<div class="columns is-multiline">
+	{{#get "posts" filter="page:true+tag:frontpage"}}
+	{{#foreach posts}}
+	    <div class="column is-4">
+	    	{{> post-card}}
+	    </div>
+	{{/foreach}}
+	{{/get}}
 </div>
-</main>

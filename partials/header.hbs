@@ -1,16 +1,32 @@
-{{!-- The big featured header, it uses blog cover image as a BG if available --}}
-<header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
-    <div class="inner">
-        <div class="site-header-content">
-            <h1 class="site-title">
+<header role="banner has-bottom-padding">
+    <div class="has-top-padding has-bottom-padding">
+        <div class="tile is-2 is-vertical">
+            <a href="{{@blog.url}}">
+            <p class="title">
                 {{#if @blog.logo}}
-                    <img class="site-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
+                    <img class="image" src="{{@blog.logo}}" alt="{{@blog.title}}" />
                 {{else}}
                     {{@blog.title}}
                 {{/if}}
-            </h1>
-            <h2 class="site-description">{{@blog.description}}</h2>
+                <span class="subtitle is-7">{{@blog.description}}</span>
+            </p>
+            </a>
+            <br>
         </div>
-        {{> "site-nav"}}
+        {{#has tag="dna"}}
+            {{> "site-nav-dna"}}
+        {{/has}}
+
+        {{#has tag="study"}}
+            {{> "site-nav-study"}}
+        {{/has}}
+
+        {{#has tag="startup"}}
+            {{> "site-nav-startup"}}
+        {{/has}}
+
+        {{^has tag="dna,study,startup"}}
+            {{> "site-nav"}}
+        {{/has}}
     </div>
 </header>

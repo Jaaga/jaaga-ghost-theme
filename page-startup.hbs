@@ -8,17 +8,25 @@ into the {body} of the default.hbs template --}}
 
 {{> "header"}}
 
-{{> "content"}}
+<section class="hero is-startup is-bold has-no-top-margin">
+  <div class="hero-body">
+  	<div class="columns">
+    <div class="column is-6 is-offset-3">
+    	{{#get "posts" filter="featured:true+page:true+tag:startup"}}
+    	{{#foreach posts}}
+    	    <a href="{{url}}">
+    	    <p class="title is-white">{{title}}</p>
+			<p class="is-white">{{excerpt words="15"}}</p>
+			</a>
+      {{/foreach}}
+      {{/get}}
+    </div>
+    </div>
+  </div>
+</section>
 
-<div class="columns is-multiline">
-    {{#get "posts"}}
-    {{#foreach posts}}
-        <div class="column is-4">
-            {{> post-card}}
-        </div>
-    {{/foreach}}
-    {{/get}}
-</div>
+
+{{> "content"}}
 
 {{/post}}
 

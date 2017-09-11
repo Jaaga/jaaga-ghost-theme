@@ -7,32 +7,32 @@ You'll notice that we *don't* use any JavsScript, or ghost_head / ghost_foot in 
 {{!< default}}
 
 {{> "header"}}
-<main id="site-main" class="site-main outer" role="main">
-    <div class="inner">
 
-        <section class="error-message">
-            <h1 class="error-code">{{code}}</h1>
-            <p class="error-description">{{message}}</p>
-            <a class="error-link" href="{{@blog.url}}">Go to the front page →</a>
-        </section>
+<div class="container">
 
-        {{#if errorDetails}}
-        <section class="error-stack">
-            <h3>Theme errors</h3>
-            <ul class="error-stack-list">
-                {{#each errorDetails}}
-                    <li>
-                        <em class="error-stack-function">{{{rule}}}</em>
+    <section>
+        <br>
+        <h2>Oops! Something's not quite right. <a class="error-link" href="{{@blog.url}}">You can go back to the front page →</a></h2>
+        <p class="is-5">Error: {{code}}</p>
+        <p class="is-6">{{message}}</p>
+    </section>
 
-                        {{#each failures}}
-                            <p><span class="error-stack-file">Ref: {{ref}}</span></p>
-                            <p><span class="error-stack-file">Message: {{message}}</span></p>
-                        {{/each}}
-                    </li>
-                {{/each}}
-            </ul>
-        </section>
-        {{/if}}
+    {{#if errorDetails}}
+    <section>
+        <h3>Theme errors</h3>
+        <ul>
+            {{#each errorDetails}}
+                <li>
+                    <em>{{{rule}}}</em>
 
-    </div>
-</main>
+                    {{#each failures}}
+                        <p><span>Ref: {{ref}}</span></p>
+                        <p><span>Message: {{message}}</span></p>
+                    {{/each}}
+                </li>
+            {{/each}}
+        </ul>
+    </section>
+    {{/if}}
+
+</div>
