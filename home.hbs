@@ -4,8 +4,28 @@ into the {body} of the default.hbs template --}}
 
 {{> "header"}}
 
-{{!-- The main content area --}}
-<div class="columns is-multiline">
+<!-- <section class="hero is-dna-banner is-bold has-no-top-margin">
+	<a href="/dna/">
+  <div class="hero-body">
+	<p class="title is-4 is-white">DNA</p>
+  </div>
+  </a>
+</section>
+
+<section class="hero is-study-banner is-bold has-no-top-margin">
+  <div class="hero-body">
+	<a href="/study/"><p class="title is-4 is-white">Study</p></a>
+  </div>
+</section>
+
+<section class="hero is-startup-banner is-bold has-no-top-margin">
+  <div class="hero-body">
+	<a href="/startup/"><p class="title is-4 is-white">Startup</p></a>
+  </div>
+</section>
+ -->
+
+ <div class="columns is-multiline">
 	{{#get "posts" filter="page:true+tag:frontpage"}}
 	{{#foreach posts}}
 	    <div class="column is-4">

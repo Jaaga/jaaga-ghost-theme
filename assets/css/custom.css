@@ -15,6 +15,10 @@
   background-color: rgba(255,255,255,0.8);
 }
 
+.is-white-bg {
+	background-color: #FFF;	
+}
+
 .is-jaaga-red {
 	background-color: #F05023;	
 }
@@ -61,4 +65,8 @@
 .is-match-navbar {
 	margin-left: -1rem;
 	margin-right: -1rem;
+}
+
+.has-no-border {
+	border: none;
 }
