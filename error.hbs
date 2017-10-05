@@ -10,29 +10,29 @@ You'll notice that we *don't* use any JavsScript, or ghost_head / ghost_foot in 
 
 <div class="container">
 
-    <section>
-        <br>
-        <h2>Oops! Something's not quite right. <a class="error-link" href="{{@blog.url}}">You can go back to the front page →</a></h2>
-        <p class="is-5">Error: {{code}}</p>
-        <p class="is-6">{{message}}</p>
-    </section>
+  <section>
+    <br>
+    <h2>Oops! Something's not quite right. <a class="error-link" href="{{@blog.url}}">You can go back to the front page →</a></h2>
+    <p class="is-5">Error: {{code}}</p>
+    <p class="is-6">{{message}}</p>
+  </section>
 
-    {{#if errorDetails}}
+  {{#if errorDetails}}
     <section>
-        <h3>Theme errors</h3>
-        <ul>
-            {{#each errorDetails}}
-                <li>
-                    <em>{{{rule}}}</em>
+      <h3>Theme errors</h3>
+      <ul>
+        {{#each errorDetails}}
+          <li>
+            <em>{{{rule}}}</em>
 
-                    {{#each failures}}
-                        <p><span>Ref: {{ref}}</span></p>
-                        <p><span>Message: {{message}}</span></p>
-                    {{/each}}
-                </li>
+            {{#each failures}}
+              <p><span>Ref: {{ref}}</span></p>
+              <p><span>Message: {{message}}</span></p>
             {{/each}}
-        </ul>
+          </li>
+        {{/each}}
+      </ul>
     </section>
-    {{/if}}
+  {{/if}}
 
 </div>
