@@ -4,7 +4,7 @@
 }
 
 .is-full-width {
-  width: 100%;  
+  width: 100%;
 }
 
 .is-transparent {
@@ -16,15 +16,15 @@
 }
 
 .is-white-bg {
-	background-color: #FFF;	
+	background-color: #FFF;
 }
 
 .is-jaaga-red {
-	background-color: #F05023;	
+	background-color: #F05023;
 }
 
 .is-jaaga-blue {
-	background-color: #164A91;	
+	background-color: #164A91;
 }
 
 .is-dna {
@@ -69,4 +69,10 @@
 
 .has-no-border {
 	border: none;
+}
+
+.navbar-item {
+	font-family: Dosis, sans-serif;
+	font-weight: 700;
+	font-size: 16px;
 }
