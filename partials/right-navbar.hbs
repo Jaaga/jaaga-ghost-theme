@@ -1,22 +1,8 @@
 <div class="navbar-end">
-    <a class="navbar-item is-white" href="/events/">Upcoming Events</a>
-    <a class="navbar-item is-white" href="/locations/">Locations</a>
-    <a class="navbar-item is-white" href="/blog/">Blog</a>
-    <div class="navbar-item">
-    <div class="field is-grouped">
-      <a class="button is-jaaga-red has-no-border" href="mailto:hello@jaaga.in" target="_blank">
-        <span class="icon"><i class="fa fa-envelope is-white"></i></span>
-      </a>&nbsp;
-    {{#if @blog.facebook}}
-      <a class="button is-jaaga-red has-no-border" href="{{facebook_url @blog.facebook}}" target="_blank">
-        <span class="icon"><i class="fa fa-facebook is-white"></i></span>
-      </a>&nbsp;
-    {{/if}}
-    {{#if @blog.twitter}}
-      <a class="button is-jaaga-red has-no-border" href="{{twitter_url @blog.twitter}}" target="_blank">
-        <span class="icon"><i class="fa fa-twitter is-white"></i></span>
-      </a>
-    {{/if}}
-    </div>
-    </div>
+  <div class="field is-grouped ">
+    <a class="navbar-item is-white" href="/donate/"><i class="fa fa-heart" aria-hidden="true"></i></a>
+    <a class="navbar-item is-white" href="/locations/"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+    <a class="navbar-item is-white" href="/blog/"><i class="fa fa-quote-left" aria-hidden="true"></i></a>
+    <a class="navbar-item is-white" href="/events/"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></a>
+  </div>
 </div>
