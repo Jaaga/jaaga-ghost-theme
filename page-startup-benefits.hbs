@@ -11,13 +11,15 @@ into the {body} of the default.hbs template --}}
 {{> "content"}}
 
 <div class="columns">
-  <div class="column is-6 is-offset-3 level">
+  <div class="column is-6 is-offset-3">
 <table>
+  <tbody>
 {{#get "posts" filter="page:true+tag:startup-partner"}}
   {{#foreach posts}}
     {{> "partner-row"}}
   {{/foreach}}
   {{/get}}
+</tbody>
 </table>
 </div>
 </div>

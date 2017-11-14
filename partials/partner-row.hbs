@@ -1,10 +1,8 @@
-<tr class="level-item has-no-border">
-  <td class="has-no-border">
+<tr>
+  <td>
     {{#if feature_image}}
-      <figure class="image is-marginless is-128x128">
-        <img src="{{feature_image}}" alt="Image" style="align-self: center;" title="{{title}}">
-      </figure>
+        <img src="{{feature_image}}" alt="{{excerpt words="33"}}" title="{{title}}">
     {{/if}}
   </td>
-  <td class="has-no-border"><b>{{title}}</b>: {{excerpt words="33"}}</td>
+  <td><b>{{title}}</b>: {{excerpt words="33"}}</td>
 </tr>
