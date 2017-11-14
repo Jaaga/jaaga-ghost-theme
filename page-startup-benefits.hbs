@@ -10,15 +10,16 @@ into the {body} of the default.hbs template --}}
 
 {{> "content"}}
 
-
-<div class="columns is-multiline">
+<div class="columns">
+  <div class="column is-6 is-offset-3">
+<table>
 {{#get "posts" filter="page:true+tag:startup-partner"}}
   {{#foreach posts}}
-  <div class="column is-3">
-    {{> "post-card"}}
-  </div>
+    {{> "partner-row"}}
   {{/foreach}}
   {{/get}}
+</table>
+</div>
 </div>
 
 {{/post}}
