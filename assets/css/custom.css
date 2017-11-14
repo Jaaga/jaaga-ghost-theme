@@ -76,3 +76,21 @@
 	font-weight: 700;
 	font-size: 16px;
 }
+
+.im-checkout-btn {
+  background-color: #F05023;
+  color: white;
+  padding: 0.5em;
+  border-radius: 3px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.im-checkout-btn:hover {
+  background-color: #e83b00;
+  color: white;
+  padding: 0.5em;
+  border-radius: 3px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
