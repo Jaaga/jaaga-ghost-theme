@@ -11,7 +11,7 @@ into the {body} of the default.hbs template --}}
   <div class="hero-body">
   	<div class="columns">
     <div class="column is-6 is-offset-3">
-    	{{#get "posts" filter="featured:true+page:true+tag:dna"}}
+    	{{#get "posts" limit="all" filter="featured:true+page:true+tag:dna"}}
     	{{#foreach posts}}
     	    <a href="{{url}}">
     	    <p class="title is-white">{{title}}</p>
@@ -28,7 +28,7 @@ into the {body} of the default.hbs template --}}
 {{> "content"}}
 
 <div class="columns is-multiline">
-{{#get "posts" filter="page:true+tag:gallery"}}
+{{#get "posts" limit="all" filter="page:true+tag:gallery"}}
   {{#foreach posts}}
   <div class="column is-4">
     {{> "post-card"}}

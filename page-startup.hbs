@@ -12,7 +12,7 @@ into the {body} of the default.hbs template --}}
   <div class="hero-body">
   	<div class="columns">
     <div class="column is-6 is-offset-3">
-    	{{#get "posts" filter="featured:true+page:true+tag:startup"}}
+    	{{#get "posts" limit="all" filter="featured:true+page:true+tag:startup"}}
     	{{#foreach posts}}
     	    <a href="{{url}}">
     	    <p class="title is-white">{{title}}</p>

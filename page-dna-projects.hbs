@@ -11,7 +11,7 @@ into the {body} of the default.hbs template --}}
 {{> "content"}}
 
 <div class="columns is-multiline">
-{{#get "posts" filter="page:true+tag:gallery"}}
+{{#get "posts" limit="all" filter="page:true+tag:gallery"}}
   {{#foreach posts}}
   <div class="column is-4">
     {{> "post-card"}}
