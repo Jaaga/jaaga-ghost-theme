@@ -39,7 +39,8 @@
 	background-color: #A00B4B;
 }
 
-.is-startup > a,navbar-item,navbar-link {
+.is-labs {
+	background-color: #1c9524;
 }
 
 .is-white {
